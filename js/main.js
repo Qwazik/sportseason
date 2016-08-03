@@ -66,8 +66,7 @@
         gallery:'gal1',
         cursor: 'pointer', 
         galleryActiveClass: 'active', 
-        imageCrossfade: true, 
-        loadingIcon: 'img/giphy.gif'
+        imageCrossfade: true
     }); 
 
     //pass the images to Fancybox
