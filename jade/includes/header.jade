@@ -1,0 +1,72 @@
+mixin header(type, logoImg)
+	//+------- header -------+
+	header.main-header(class=type)
+		#callback
+			form(action="#")
+				.header: span Заказать<br/>обратный звонок
+				.fields
+					label
+						span.ico
+						input(type="text" placeholder="Введите ваше имя*")
+					label
+						span.ico
+						input(type="text" placeholder="На какой номер перезвонить*")
+					label
+						span.ico
+						input(type="text" placeholder="Удобное время для звонка*")
+				button(type="submit") Оправить заявку
+		.container
+			a(href="/").logo
+				img(src=logoImg, alt="Спортивный сезон")
+			.main-header__right
+				.header-right__top
+					ul.header-contacts__list
+						.header-contacts__item.tel
+							span.ico
+							spna.text 8 800 222 06 92
+						.header-contacts__item.tel
+							span.ico
+							spna.text +7 909 999 95 71
+						.header-contacts__item
+							span.ico
+							spna.text: a(class="fancybox" href="#callback") Обратный звонок
+						.header-contacts__item
+							span.ico
+							spna.text: a(href="mailto:info@sportseason.net") info@sportseason.net
+				.header-right__bottom
+					.header-right__menu
+						ul.menu
+							li.dropdown
+								a(href="catalog.html") Jessica
+								ul.dropdown-list
+									li: a(href="catalog.html") Леггинсы
+									li: a(href="catalog.html") Капри
+									li: a(href="catalog.html") Шорты
+									li: a(href="catalog.html") Юбки
+									li: a(href="catalog.html") Короткие топы
+									li: a(href="catalog.html") Длинные топы
+							li: a(href="inner.html") О продукции Jessica
+							li: a(href="inner.html") Гид по размерам
+							li: a(href="inner.html") Оплата
+							li: a(href="inner.html") Доставка
+							li: a(href="inner.html") Контакты
+					a(href="#").header-right__cart
+						span.ico
+						span.text Ваша корзина (0)
+	//+----- header end -----+
+
+mixin catalogItem(img, price, incart)
+	.col-3
+		.catalog-item
+			a(href="tovar.html").catalog-item__image
+				img(src=img, alt="")
+			.catalog-item__footer
+				.left
+					.name Abby capri
+					a(href="#buy" class=incart).btn Купить
+				.right
+					.price
+						=price
+						span руб
+
+

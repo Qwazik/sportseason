@@ -1,5 +1,71 @@
 extends template
 
 block main
-	h2 Главная
-	p Ветка мастер
+	+header('', 'img/main-logo.png')
+	//+------- Слоган -------
+	.main-headers
+		.container
+			h1 Женская одежда для фитнеса
+			span Спорт требует мотивации
+			span.red Правильная одежда мотивирует
+	//+----- Слоган конец -----+
+	//+------- Карусель -------+
+	.main-carousel
+		.container
+			#mainCarousel
+				.main-carousel__item
+					.text
+						a(href="#") Новая коллекция 2016 года
+					img(src="img/slide1.jpg", alt="")
+				.main-carousel__item
+					.text
+						a(href="#") Наш шоу-рум открыт для вас ежедневно
+					img(src="img/slide2.jpg", alt="")
+				.main-carousel__item
+					.text
+						a(href="#") Спортивная одежда от бренда Jessica - производство Венгрия
+					img(src="img/slide3.jpg", alt="")
+	//+----- Карусель конец -----+
+	//+------- Достоинства -------+
+	.main-features
+		.container
+			ul.features__list.clearfix
+				li.features__item
+					.ico
+						img(src="img/features1.png", alt="")
+					.header Износостойкость
+					.text
+						Держит форму и сохраняет цвет на протяжении всего времени использования
+				li.features__item
+					.ico
+						img(src="img/features2.png", alt="")
+					.header СОВРЕМЕННЫЙ СТИЛЬ
+					.text
+						При выборе стиля основной акцент лежит на показе женской формы наиболее эстетично и приятно
+				li.features__item
+					.ico
+						img(src="img/features3.png", alt="")
+					.header КОМФОРТ
+					.text
+						Комфорт во время физической нагрузки, не сковывает движения во время тренировок
+				li.features__item
+					.ico
+						img(src="img/features4.png", alt="")
+					.header КАЧЕСТВО
+					.text
+						Вся продукция фабрики Jessica выполнена из лучшего итальянского текстиля
+				li.features__item
+					.ico
+						img(src="img/features5.png", alt="")
+					.header ПРЯМЫЕ ПОСТАВКИ
+					.text
+						Мы являемся прямым поставщиком с фабрики, что благоприятно сказывается на ценах
+				li.features__item
+					.ico
+						img(src="img/features6.png", alt="")
+					.header ЕВРОПЕЙСКИЙ БРЭНД
+					.text
+						Фабрика Jessica существует с 1994 года и зарекомендовала себя, как надежный производитель одежды для фитнеса в Европе
+	//+----- Достоинства конец -----+
+	.container
+		a(href="catalog.html").catalog-button Посмотреть полный каталог одежды

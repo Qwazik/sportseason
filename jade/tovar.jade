@@ -1,0 +1,30 @@
+extends template-inner
+
+block main
+	+header('inner', 'img/logo.jpg')
+	.main-content
+		.container
+			.breadcumbs
+				ul
+					li: a(href="#") Главная
+					li О продукции Jessica
+			.tovar-area.clearfix
+				.tovar-left
+					.main-image
+						img(id="img_01" src="pic/reviews/1lg.jpg" data-zoom-image="pic/reviews/1lg.jpg" width="500" height="500")
+					#gal1
+						a(href="#" data-image="pic/reviews/1lg.jpg" data-zoom-image="pic/reviews/1lg.jpg")
+							img(id="img_01", src="pic/reviews/1sm.jpg", alt="")
+						a(href="#" data-image="pic/reviews/2lg.jpg" data-zoom-image="pic/reviews/2lg.jpg")
+							img(id="img_01", src="pic/reviews/2sm.jpg", alt="")
+						a(href="#" data-image="pic/reviews/3lg.jpg" data-zoom-image="pic/reviews/3lg.jpg")
+							img(id="img_01", src="pic/reviews/3sm.jpg", alt="")
+						a(href="#" data-image="pic/reviews/4lg.jpg" data-zoom-image="pic/reviews/4lg.jpg")
+							img(id="img_01", src="pic/reviews/4sm.jpg", alt="")
+				.tovar-right
+					.tovar-name Debbie top
+					div
+						.tovar-price 2900 руб
+						a(href="#").btn Купить
+
+

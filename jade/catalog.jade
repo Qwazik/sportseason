@@ -1,0 +1,50 @@
+extends template-inner
+
+block main
+	+header('inner', 'img/logo.jpg')
+	.main-content
+		.container
+			.breadcumbs
+				ul
+					li: a(href="#") Главная
+					li О продукции Jessica
+			.content-header
+				h2 Jessica
+			.catalog-filter.clearfix
+				.item-col
+					span.filter-name На страницу:
+					select
+						option 12
+						option 30
+						option 60
+						option все
+				.sort
+					span.filter-name Сортировка:
+					select
+						option А - Я
+						option дешевле сверху
+						option дороже сверху
+						option новые сверху
+						option популярные сверху
+			.catalog.clearfix.row
+				+catalogItem('pic/r_imgs.jpg', '3000', 'incart')
+				+catalogItem('pic/r_imgs.jpg', '3000')
+				+catalogItem('pic/r_imgs.jpg', '2300')
+				+catalogItem('pic/r_imgs.jpg', '3700')
+				+catalogItem('pic/r_imgs.jpg', '2900')
+				+catalogItem('pic/r_imgs.jpg', '2600')
+				+catalogItem('pic/r_imgs.jpg', '2800')
+				+catalogItem('pic/r_imgs.jpg', '3500')
+				+catalogItem('pic/r_imgs.jpg', '3000')
+				+catalogItem('pic/r_imgs.jpg', '3300')
+				+catalogItem('pic/r_imgs.jpg', '1800')
+				+catalogItem('pic/r_imgs.jpg', '2500')
+			.pagination
+				ul
+					li: a(href="#") Назад
+					li.active: span 1
+					li: a(href="#") 2
+					li: a(href="#") 3
+					li: a(href="#") 4
+					li: a(href="#") 5
+					li: a(href="#") Вперед
